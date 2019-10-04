@@ -1,0 +1,9 @@
+apiVersion: v1
+appVersion: 1.2
+description: TravelExpenses IIS Docker Image
+home: https://marinexchange.com
+maintainers:
+- email: dkosmac@marinexchange.com
+  name: dkosmac
+name: travelexpenses
+version: 0.1.0

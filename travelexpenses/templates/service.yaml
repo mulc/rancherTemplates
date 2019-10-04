@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "travelexpenses.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "travelexpenses.name" . }}
+    helm.sh/chart: {{ include "travelexpenses.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  clusterIP: 10.43.227.20
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.port }}
+      protocol: TCP
+      name: httpService
+     - port: {{ .Values.metrics.port }}
+      targetPort: {{ .Values.metrics.port }}
+      protocol: TCP
+      name: httpMetrics
+  selector:
+    app.kubernetes.io/name: {{ include "travelexpenses.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+status:
+  loadBalancer: {}

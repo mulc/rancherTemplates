@@ -1,0 +1,19 @@
+apiVersion: v1
+entries:
+  travelexpenses:
+  - apiVersion: v1
+    appVersion: 2.1.1
+    created: 2019-10-04T10:39:34.688214+01:00
+    deprecated: true
+    description: MXP Travel Expanses
+    maintainers:
+    - email: dkosmac@marinexchange.com
+      name: dkosmac
+    digest: 93f924d4498d588bcdda88c7401e27c6fa0f50ff0601e78885eca13eb683c1e2
+    home: https://marinexchange.com
+    icon: http://marinexchange.com/fileadmin/img/logo-marinexchange.png
+    name: travelExpenses
+    urls:
+    - travelexpenses.tgz
+    version: 2.2.2
+generated: 2019-10-04T10:39:34.688214+01:00
